@@ -10,6 +10,12 @@ class Sum(val left: Expr, val right: Expr) : Expr
 
 
 
+
+
+
+
+
+
 fun main(args: Array<String>) {
     val expr = Var("x") + 2
     val env = env("x" to 10)

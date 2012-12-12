@@ -19,6 +19,21 @@ fun eval_if(e: Expr, env: (String) -> Int): Int {
     throw IllegalArgumentException("Unknown term: $e")
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 fun eval_when(e: Expr, env: (String) -> Int): Int {
     return when (e) {
         is Num -> e.value
@@ -27,6 +42,29 @@ fun eval_when(e: Expr, env: (String) -> Int): Int {
         else -> throw IllegalArgumentException("Unknown term: $e")
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 fun Expr.eval(env: (String) -> Int): Int {
     return when (this) {

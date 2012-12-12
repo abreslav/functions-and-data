@@ -12,6 +12,8 @@ trait ExprVisitor<D, R> {
     fun visitSum(e: Sum, data: D): R
 }
 
+/* ****************************************************************** */
+
 class Num(val value: Int) : Expr {
     override fun <D, R> accept(visitor: ExprVisitor<D, R>, data: D): R {
         return visitor.visitNum(this, data)
@@ -29,6 +31,8 @@ class Sum(val left: Expr, val right: Expr) : Expr {
         return visitor.visitSum(this, data)
     }
 }
+
+/* ****************************************************************** */
 
 fun eval(e: Expr, env: (String) -> Int): Int {
     return e.accept(
@@ -57,6 +61,8 @@ fun print(e: Expr): String {
             Unit.VALUE
     )
 }
+
+/* ****************************************************************** */
 
 fun main(args: Array<String>) {
     val expr = Sum(Var("x"), Num(2))
