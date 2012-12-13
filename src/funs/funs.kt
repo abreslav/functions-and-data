@@ -1,8 +1,47 @@
 package funs
 
-val f_long: (String) -> Int = {(s: String): Int -> s.length}
 
-val f: (String) -> Int = {s -> s.length}
+
+
+
+val f_long: (x: String) -> Int
+
+        = {(s: String): Int -> s.length}
+
+
+
+
+
+
+
+
+
+
+
+val f: (String) -> Int
+        = {s -> s.length}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 fun main(args: Array<String>) {
 
@@ -14,5 +53,8 @@ fun main(args: Array<String>) {
     println(sum)
 
 
-//    listOf(1, 2, 3).map { x -> 2 * x }
+    listOf(1, 2, 3).map { x -> 2 * x }
+
+
+    // builders
 }
